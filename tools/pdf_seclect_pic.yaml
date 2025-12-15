@@ -1,0 +1,64 @@
+identity:
+  name: "pdf_seclect_pic"
+  author: "hgl"
+  label:
+    en_US: "pdf_seclect_pic"
+    zh_Hans: "pdf_seclect_pic"
+    pt_BR: "pdf_seclect_pic"
+    ja_JP: "pdf_seclect_pic"
+description:
+  human:
+    en_US: "Find the page number with pictures in the pdf."
+    zh_Hans: "Find the page number with pictures in the pdf."
+    pt_BR: "Find the page number with pictures in the pdf."
+    ja_JP: "Find the page number with pictures in the pdf."
+  llm: "Find the page number with pictures in the pdf."
+parameters:
+  - name: pdf_file
+    type: file
+    required: true
+    label:
+      en_US: PDF file
+      zh_Hans: PDF 文件
+      pt_BR: Arquivo PDF
+      ja_JP: PDF ファイル
+    human_description:
+      en_US: Upload the PDF to scan for pages containing images.
+      zh_Hans: 上传需要检测图片页的 PDF 文件。
+      pt_BR: Envie o PDF que será verificado por páginas com imagens.
+      ja_JP: 画像を含むページを検出する PDF をアップロードしてください。
+    llm_description: The PDF file to scan for pages containing images.
+    form: llm
+  - name: min_width
+    type: number
+    required: false
+    label:
+      en_US: Min image width
+      zh_Hans: 最小图片宽度
+      pt_BR: Largura mínima da imagem
+      ja_JP: 最小画像幅
+    human_description:
+      en_US: Minimum image width in pixels; defaults to 240 if empty.
+      zh_Hans: 最小图片宽度（像素）；留空默认 240。
+      pt_BR: Largura mínima em pixels; padrão 240 se vazio.
+      ja_JP: ピクセル単位の最小幅。未指定は 240。
+    llm_description: Optional minimum image width in pixels; default 240.
+    form: llm
+  - name: min_height
+    type: number
+    required: false
+    label:
+      en_US: Min image height
+      zh_Hans: 最小图片高度
+      pt_BR: Altura mínima da imagem
+      ja_JP: 最小画像高さ
+    human_description:
+      en_US: Minimum image height in pixels; defaults to 70 if empty.
+      zh_Hans: 最小图片高度（像素）；留空默认 70。
+      pt_BR: Altura mínima em pixels; padrão 70 se vazio.
+      ja_JP: ピクセル単位の最小高さ。未指定は 70。
+    llm_description: Optional minimum image height in pixels; default 70.
+    form: llm
+extra:
+  python:
+    source: tools/pdf_seclect_pic.py

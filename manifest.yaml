@@ -1,0 +1,35 @@
+version: 0.0.1
+type: plugin
+author: hgl
+name: pdf_seclect_pic
+label:
+  en_US: pdf_seclect_pic
+  ja_JP: pdf_seclect_pic
+  zh_Hans: pdf_seclect_pic
+  pt_BR: pdf_seclect_pic
+description:
+  en_US: Find the page number with pictures in the pdf.
+  ja_JP: Find the page number with pictures in the pdf.
+  zh_Hans: Find the page number with pictures in the pdf.
+  pt_BR: Find the page number with pictures in the pdf.
+icon: icon.svg
+icon_dark: icon-dark.svg
+resource:
+  memory: 268435456
+  permission: {}
+plugins:
+  tools:
+    - provider/pdf_seclect_pic.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2025-12-12T17:06:54.618243327+08:00
+privacy: PRIVACY.md
+verified: true
