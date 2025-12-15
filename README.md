@@ -5,6 +5,7 @@
 **Type:** tool
 
 ### Description
+Find the page number with pictures in the pdf
 
 
 
